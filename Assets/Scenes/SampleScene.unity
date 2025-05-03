@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 1588784504}
   - component: {fileID: 1588784508}
   - component: {fileID: 1588784509}
+  - component: {fileID: 1588784510}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -693,8 +694,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bceebfc6dae0e46a65eebcc4beee7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 8
-  jumpForce: 38
+  walkSpeed: 20
+  jumpForce: 45
+  jumpBufferFrames: 8
+  coyoteTime: 0.1
+  maxAirJumps: 1
   groundCheck: {fileID: 543760130}
   groundCheckY: 0.2
   groundCheckX: 0.5
@@ -722,6 +726,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1588784510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588784503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ec22c67e6c7464ea1abbdb6f703c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumping: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
